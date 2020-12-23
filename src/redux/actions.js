@@ -1,39 +1,26 @@
+import { LOAD, UPDATE, ADD, REMOVE, SEARCH } from './types';
 
-import { INIT, UPDATE, ADD, REMOVE, SEARCH } from './types';
+export const load = payload => ({
+  type: LOAD,
+  payload
+});
 
-export function init(params) {
-  return {
-    type: INIT,
-    params
-  };
-}
+export const update = payload => ({
+  type: UPDATE,
+  payload
+});
 
-export function update(params) {
-  return {
-    type: UPDATE,
-    params
-  };
-}
+export const add = payload => ({
+  type: ADD,
+  payload
+});
 
+export const remove = payload => ({
+  type: REMOVE,
+  payload
+});
 
-export function add(params) {
-  return {
-    type: ADD,
-    params
-  };
-}
-
-
-export function remove(params) {
-  return {
-    type: REMOVE,
-    params
-  };
-}
-
-export function search(params) {
-  return {
-    type: SEARCH,
-    params
-  };
-}
+export const search = payload => ({
+  type: SEARCH,
+  payload
+});
